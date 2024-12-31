@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "transformers-tests"
+version = "0.1.0"
+description = ""
+authors = ["kolommik <mikhail.kolomasov@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ipykernel = "^6.29.5"
+jupyterlab = "^4.3.4"
+numpy = ">=1.26.0,<2.2"
+pandas = "^2.2.3"
+matplotlib = "^3.10.0"
+seaborn = "^0.13.2"
+plotly = "^5.24.1"
+scikit-learn = "^1.6.0"
+streamlit = "^1.41.1" # для создания веб-интерфейсов
+gradio = "^5.9.1"     # для создания веб-интерфейсов
+wandb = "^0.19.1"     # Weights & Biases, альтернатива tensorboard
+manifold = "^0.2.0"   # интерактивная визуализация эмбеддингов
+visdom = "^0.2.4"     # серверное решение для визуализации
+netron = "^8.0.8"     # визуализация архитектуры нейронных сетей
+captum = "^0.7.0"     # визуализация объяснимости моделей (interpretability)
+torch = "^2.5.1"
+torchvision = "^0.20.1"
+torchaudio = "^2.5.1"
+pytorch-lightning = "^2.5.0.post0" # удобная обертка над PyTorch с встроенной визуализацией
+torchviz = "^0.0.3"                # визуализация вычислительных графов PyTorch
+pytorch-model-summary = "^0.1.2"   # аналог model.summary() из Keras
+numba = "^0.60.0"
+umap-learn = "^0.5.7"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+mypy = "^1.14.1"
+pylint = "^3.3.3"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
